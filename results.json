@@ -1,0 +1,95 @@
+{
+  "group_members": [
+    {"name": "Omar Hassan Ibrahim", "id": "2401241409"},
+    {"name": "Ziad Khaled", "id": "2401243947"},
+    {"name": "Amr Mostafa Etman", "id": "2401246342"},
+    {"name": "Ammar Yasser Saiid", "id": "2401246882"},
+    {"name": "Mazen Mohamed Shafiq", "id": "2401244585"}
+  ],
+  "best_hyperparameters": {
+    "Assignment1_KNN_Classifier": {
+      "model": "KNeighborsClassifier",
+      "dataset": "Car Price Dataset",
+      "task": "Price Category Classification (Cheap / Moderate / Expensive)",
+      "best_params": {
+        "n_neighbors": 5,
+        "metric": "manhattan"
+      },
+      "best_cv_score": 0.879
+    },
+    "Assignment3_KNN": {
+      "model": "KNeighborsClassifier",
+      "dataset": "FIFA Players Dataset",
+      "task": "Performance Class Classification",
+      "best_params": {
+        "n_neighbors": 9
+      },
+      "best_cv_score": 0.8791
+    },
+    "Assignment3_SVM": {
+      "model": "SVC",
+      "dataset": "FIFA Players Dataset",
+      "task": "Performance Class Classification",
+      "best_params": {
+        "C": 1,
+        "kernel": "linear"
+      },
+      "best_cv_score": 1.0
+    },
+    "Assignment3_RandomForest": {
+      "model": "RandomForestClassifier",
+      "dataset": "FIFA Players Dataset",
+      "task": "Performance Class Classification",
+      "best_params": {
+        "n_estimators": 200,
+        "max_depth": 10
+      },
+      "best_cv_score": 0.9957
+    }
+  },
+  "cv_stability": {
+    "Assignment2_PolynomialRegression_KFold": {
+      "model": "Ridge Regression (Polynomial degree=4)",
+      "metric": "RMSE",
+      "cv_method": "KFold(n_splits=5, shuffle=True, random_state=42)",
+      "fold_scores": [1.03833, 1.16015, 2.32083, 1.19958, 1.12121],
+      "mean": 1.36802,
+      "std": 0.47938
+    },
+    "Assignment2_LogisticRegression_StratifiedKFold": {
+      "model": "Logistic Regression (L2, best C=0.4942)",
+      "metric": "accuracy",
+      "cv_method": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+      "mean": 0.9916,
+      "std": 0.0011
+    },
+    "Assignment2_GaussianNB_StratifiedKFold": {
+      "model": "GaussianNB",
+      "metric": "accuracy",
+      "cv_method": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42)",
+      "mean": 0.7162,
+      "std": 0.0118
+    },
+    "Assignment3_KNN_CV": {
+      "model": "KNeighborsClassifier (n_neighbors=9)",
+      "metric": "accuracy",
+      "cv_method": "cross_val_score(cv=5)",
+      "mean": 0.8791,
+      "std": 0.0044
+    },
+    "Assignment3_SVM_CV": {
+      "model": "SVC (C=1, kernel=linear)",
+      "metric": "accuracy",
+      "cv_method": "cross_val_score(cv=5)",
+      "mean": 1.0,
+      "std": 0.0
+    },
+    "Assignment3_RandomForest_CV": {
+      "model": "RandomForestClassifier (n_estimators=200, max_depth=10)",
+      "metric": "accuracy",
+      "cv_method": "cross_val_score(cv=5)",
+      "mean": 1.0,
+      "std": 0.0
+    }
+  }
+}
